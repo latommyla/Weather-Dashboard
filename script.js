@@ -29,7 +29,7 @@ function displayWeather(event) {
 }
 
 function currentWeather(city) {
-  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + apiKey;
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey;
   
   fetch(queryURL)
     .then(function(response) {
@@ -38,19 +38,19 @@ function currentWeather(city) {
     .then(function(response){
 
     var weathericon = response.weather[0].icon;
-    var iconurl = "http://openweathermap.org/img/w/" +weathericon + ".png";
+    var iconurl = "http://openweathermap.org/img/w/" + weathericon + ".png";
     var date = new Date(response.dt*1000).toLocaleDateString();
 
     $(currentCity).html(response.name + "("+date+")" + "<img src=" +iconurl+ ">");
 
     var tempF = (response.main.temp - 273.15) * 1.80 + 32;
-    $(currentTemperature).html((tempF).toFixed(2) + "&#8457");
+    $(currentTemperature).html((tempF).toFixed(0) + "&#8457");
     $(currentHumidity).html(response.main.humidity + "%");
     var ws = response.wind.speed;
-    var windsmph = (ws*2.237.toFixed(1));
+    var windsmph = (ws*2.2.toFixed(0));
     $(currentWind).html(windsmph + "MPH");
 
-    UVIndex(response.coord.lon, response.coord.lat);
+    uvIndex(response.coord.lon, response.coord.lat);
     forecast(response.id);
     if(response.cod === 200) {
       sCity = JSON.parse(localStorage.getItem("cityname"));
@@ -72,17 +72,21 @@ function currentWeather(city) {
   })
 }
 
-function UVIndex(ln, lt) {
-  var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lt + "&lon=" + ln;
+function uvIndex(ln, lt) {
+  var uvURL = "https://api.openweathermap.org/data/2.5/onecall?appid=" + apiKey + "&lat=" + lt + "&lon=" + ln + "&exclude=current";
+
   fetch(uvURL)
     .then(function(response) {
+      return response.json();
+  })
+    .then(function(response) {
       $(currentIndex).html(response.value);
-  });
+    });
 }
 
 function forecast(cityid) {
-  var dayover = false;
   var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityid + "&appid=" + apiKey;
+
   fetch(forecastURL)
     .then(function(response) {
       return response.json();
@@ -95,11 +99,11 @@ function forecast(cityid) {
       var iconcode = response.list[((i+1) * 8) -1].weather[0].icon;
       var iconurl = "https://openweathermap.org/img/wn/" + iconcode + ".png";
       var tempK = response.list[((i+1) * 8) -1].main.temp;
-      var tempF = (((tempK - 273.5) * 1.80) + 32).toFixed(2);
+      var tempF = (((tempK - 273.5) * 1.80) + 32).toFixed(0);
       var humidity = response.list[((i+1) * 8) -1].main.humidity;
 
       $("#date"+i).html(date);
-      $("#image"+i).html("<img src="+iconurl+">");
+      $("#image"+i).html("<img src=" + iconurl + ">");
       $("#temp"+i).html(tempF + "&#8457");
       $("#humid"+i).html(humidity + "%");
     }
