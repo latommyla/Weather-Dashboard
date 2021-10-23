@@ -4,8 +4,8 @@ This project was for my UCSD coding bootcamp. Learning how to use API's from oth
 
 ## Demo & Repository
 
-[GitHub Repo](https://github.com/latommyla/Weather-Dashboard)
-[GitHub Deployed Live URL](https://latommyla.github.io/Weather-Dashboard/)
+* [GitHub Repo](https://github.com/latommyla/Weather-Dashboard)
+* [GitHub Deployed Live URL](https://latommyla.github.io/Weather-Dashboard/)
 
 ## Description
 
@@ -31,4 +31,24 @@ To install this project, simply download the zip file or clone the SSH key to yo
 
 ## How it works?
 
-- 
+- When viewing the deployed application, you will be presented with a search bar to search for any city of your choice.
+
+<img src="./assets/images/demo1.png" alt="mainpage" title="mainpage">
+
+- Input the city of your choice, then click "Search" button.
+
+<img src="./assets/images/demo2.png" alt="searchbar" title="searchbar">
+
+- The weather then will be displayed with the temperture, wind speed, and humidity. Also along with the next 5 days.
+
+<img src="./assets/images/demo3.png" alt="currentforecast" title="currentforecast">
+
+- If you search up multiple cities, then you will generate a list and can press the "Clear" button to clear everything out.
+
+<img src="./assets/images/demo4.png" alt="clearbutton" title="clearbutton">
+
+## Contact 
+
+* [My Gmail](mailto:tommyl.dmd@gmail.com)
+* [GitHub](https://github.com/latommyla)
+* [Instagram](https://instagram.com/latommyla)
