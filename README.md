@@ -43,9 +43,6 @@ To install this project, simply download the zip file or clone the SSH key to yo
 
 <img src="./assets/images/demo3.png" alt="currentforecast" title="currentforecast">
 
-- If you search up multiple cities, then you will generate a list and can press the "Clear" button to clear everything out.
-
-<img src="./assets/images/demo4.png" alt="clearbutton" title="clearbutton">
 
 ## Contact 
 
