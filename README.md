@@ -43,7 +43,6 @@ To install this project, simply download the zip file or clone the SSH key to yo
 
 <img src="./assets/images/demo3.png" alt="currentforecast" title="currentforecast">
 
-
 ## Contact 
 
 * [My Gmail](mailto:tommyl.dmd@gmail.com)
