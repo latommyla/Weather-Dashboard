@@ -47,6 +47,8 @@ To install this project, simply download the zip file or clone the SSH key to yo
 
 ## Contact 
 
-* [My Gmail](mailto:tommyl.dmd@gmail.com)
-* [GitHub](https://github.com/latommyla)
-* [Instagram](https://instagram.com/latommyla)
+- [Portfolio](https://latommyla.github.io/TL-Portfolio/)
+- [LinkedIn](https://www.linkedin.com/in/tommymla/)
+- [My Gmail](mailto:tommyl.dmd@gmail.com)
+- [GitHub](https://github.com/latommyla)
+- [Instagram](https://instagram.com/latommyla)
